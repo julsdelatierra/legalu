@@ -1,0 +1,20 @@
+{%extends 'layout.html'%}
+{%block container%}
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit" style="text-align:center;">
+    <h1>{{PRODUCT_NAME}}</h1>
+    <br>
+    <p>{{PRODUCT_DESCRIPTION}}</p>
+    <br>
+    <br>
+    <p>
+      <a href="/new/" class="btn btn-primary btn-large">Nuevo documento</a>
+    </p>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; {{COMPANY}} {{YEAR}}</p>
+  </footer>
+{%endblock%}

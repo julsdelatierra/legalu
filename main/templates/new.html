@@ -1,0 +1,37 @@
+{%extends 'layout.html'%}
+{%block container%}
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit" style="text-align:center;">
+    <h1>Nuevo documento</h1>
+    <br>
+    <form class="form-vertical" action="/save" method="post">
+      {%csrf_token%}
+      <fieldset>
+        <div class="control-group">
+          <input name="first_name" type="text" placeholder="Nombre">
+        </div>
+        <div class="control-group">
+          <input name="last_name" type="text" placeholder="Apellido">
+        </div>
+        <div class="control-group">
+          <input name="birthday" type="text" placeholder="Fecha de nacimiento">
+        </div>
+        <div class="control-group">
+          <input name="address" type="text" placeholder="Dirección">
+        </div>
+        <div class="control-group">
+          <input name="num_document" type="text" placeholder="Número de documento">
+        </div>
+        <div class="form-controls">
+          <input type="submit" value="Guardar">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; {{COMPANY}} {{YEAR}}</p>
+  </footer>
+{%endblock%}

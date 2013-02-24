@@ -1,0 +1,13 @@
+{%extends 'layout.html'%}
+{%block container%}
+<h2>Home</h2>
+<form action="/save" method="post">
+  {% csrf_token %}
+  <input type="text" name="first_name" placeholder="Nombre">
+  <input type="text" name="last_name" placeholder="Apellido">
+  <input type="text" name="birthday" placeholder="Fecha de nacimiento">
+  <input type="text" name="address" placeholder="Dirección">
+  <input type="text" name="num_document" placeholder="Número de documento">
+  <input type="submit" value="Guardar">
+</form>
+{%endblock%}
